@@ -544,121 +544,82 @@
 			line-height: 1.7;
 		}
 
-		/* MENU */
-		#menu {
-			background: var(--black-2);
-			padding: 7rem 4rem;
-		}
+<!-- MENU -->
+  <section id="menu" aria-labelledby="menu-heading">
+    <div class="menu-inner">
+      <div class="section-label">What We Serve</div>
+      <h2 class="section-title" id="menu-heading">THE <span style="color:var(--green-light)">MENU</span></h2>
+      <p class="section-sub">Every ingredient chosen with intention. Built your way.</p>
 
-		.menu-inner {
-			max-width: 1200px;
-			margin: 0 auto;
-		}
+      <div class="menu-category-label fade-up">&#127828; Build Your Burger</div>
+      <div class="menu-category-note fade-up">Price Coming Soon</div>
+      <div class="build-grid fade-up">
+        <div class="build-card">
+          <div class="build-card-header">Protein</div>
+          <ul class="build-list">
+            <li>
+              <span class="build-item-name">100% Grass Fed Beef</span>
+              <div class="build-item-tags"><span class="tag tag-green">Grass Fed</span><span class="tag tag-orange">High Protein</span></div>
+              <div class="build-item-options"><span class="option-tag">Single Patty</span><span class="option-tag">Double Patty</span></div>
+            </li>
+            <li>
+              <span class="build-item-name">Turkey Burger</span>
+              <div class="build-item-tags"><span class="tag tag-green">No Antibiotics</span><span class="tag tag-orange">High Protein</span></div>
+              <div class="build-item-options"><span class="option-tag">Single Patty</span><span class="option-tag">Double Patty</span></div>
+            </li>
+          </ul>
+        </div>
+        <div class="build-card">
+          <div class="build-card-header">Bun</div>
+          <ul class="build-list">
+            <li><span class="build-item-name">Dave's Killer Bread Artisan Bun</span><div class="build-item-tags"><span class="tag tag-white">Non GMO</span></div></li>
+            <li><span class="build-item-name">Dave's Killer Bread Whole Grain</span><div class="build-item-tags"><span class="tag tag-white">Whole Grain</span></div></li>
+          </ul>
+          <div class="build-card-header" style="margin-top:1.5rem">Cheese</div>
+          <ul class="build-list">
+            <li><span class="build-item-name">White American</span></li>
+            <li><span class="build-item-name">Raw Cheddar</span></li>
+          </ul>
+        </div>
+        <div class="build-card">
+          <div class="build-card-header">Toppings</div>
+          <ul class="build-list toppings-list">
+            <li><span class="build-item-name">Ketchup</span></li>
+            <li><span class="build-item-name">Mayo</span></li>
+            <li><span class="build-item-name">Mustard</span></li>
+            <li><span class="build-item-name">Fried Onions</span><div class="build-item-tags"><span class="tag tag-orange">Homemade</span></div></li>
+          </ul>
+        </div>
+      </div>
 
-		.menu-grid {
-			display: grid;
-			grid-template-columns: repeat(3, 1fr);
-			gap: 1.5rem;
-			margin-top: 4rem;
-		}
+      <div class="menu-category-label fade-up" style="margin-top:4rem">&#127789; Hot Dogs</div>
+      <div class="menu-category-note fade-up">Price Coming Soon</div>
+      <div class="build-grid fade-up" style="grid-template-columns:repeat(2,1fr)">
+        <div class="build-card">
+          <div class="build-card-header">Roll</div>
+          <ul class="build-list">
+            <li><span class="build-item-name">647 Hot Dog Roll</span></li>
+          </ul>
+        </div>
+        <div class="build-card">
+          <div class="build-card-header">Dog</div>
+          <ul class="build-list">
+            <li><span class="build-item-name">Applegate Natural Uncured Beef</span><div class="build-item-tags"><span class="tag tag-green">Uncured</span><span class="tag tag-white">No Nitrates</span></div></li>
+            <li><span class="build-item-name">Applegate Organic Uncured Turkey</span><div class="build-item-tags"><span class="tag tag-green">Organic</span><span class="tag tag-white">Uncured</span></div></li>
+          </ul>
+        </div>
+      </div>
 
-		.menu-card {
-			background: var(--black);
-			border: 1px solid rgba(255, 255, 255, 0.07);
-			border-radius: 4px;
-			overflow: hidden;
-			transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
-			position: relative;
-		}
+      <div class="menu-category-label fade-up" style="margin-top:4rem">&#129380; Drinks</div>
+      <div class="drinks-grid fade-up">
+        <div class="drink-card"><div class="drink-icon">&#128167;</div><div class="drink-name">Water</div></div>
+        <div class="drink-card"><div class="drink-icon">&#127861;</div><div class="drink-name">Bai Drink</div><div class="drink-sub">Antioxidant Infused</div></div>
+        <div class="drink-card"><div class="drink-icon">&#129380;</div><div class="drink-name">Poppi Soda</div><div class="drink-sub">Prebiotic</div></div>
+      </div>
 
-		.menu-card:hover {
-			transform: translateY(-6px);
-			border-color: rgba(245, 124, 0, 0.4);
-			box-shadow: 0 20px 60px rgba(245, 124, 0, 0.1);
-		}
+    </div>
+  </section>
 
-		.menu-card-top {
-			height: 180px;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			font-size: 5rem;
-			background: var(--black-3);
-			position: relative;
-			overflow: hidden;
-		}
-
-		.menu-card-top::after {
-			content: '';
-			position: absolute;
-			inset: 0;
-			background: linear-gradient(to bottom, transparent 50%, var(--black));
-		}
-
-		.menu-card-body {
-			padding: 1.8rem;
-		}
-
-		.menu-card-name {
-			font-family: var(--font-display);
-			font-size: 1.8rem;
-			letter-spacing: 0.04em;
-			margin-bottom: 0.5rem;
-		}
-
-		.menu-card-desc {
-			font-size: 0.88rem;
-			color: var(--gray);
-			line-height: 1.6;
-			margin-bottom: 1.2rem;
-		}
-
-		.menu-tags {
-			display: flex;
-			flex-wrap: wrap;
-			gap: 0.4rem;
-		}
-
-		.tag {
-			font-size: 0.68rem;
-			font-weight: 500;
-			letter-spacing: 0.1em;
-			text-transform: uppercase;
-			padding: 0.3rem 0.7rem;
-			border-radius: 2px;
-		}
-
-		.tag-green {
-			background: rgba(46, 125, 50, 0.2);
-			color: var(--green-light);
-			border: 1px solid rgba(46, 125, 50, 0.4);
-		}
-
-		.tag-orange {
-			background: rgba(245, 124, 0, 0.15);
-			color: var(--orange-light);
-			border: 1px solid rgba(245, 124, 0, 0.35);
-		}
-
-		.tag-white {
-			background: rgba(255, 255, 255, 0.07);
-			color: var(--gray-light);
-			border: 1px solid rgba(255, 255, 255, 0.12);
-		}
-
-		.menu-price {
-			position: absolute;
-			top: 1rem;
-			right: 1rem;
-			background: var(--orange);
-			color: var(--black);
-			font-family: var(--font-display);
-			font-size: 1.2rem;
-			letter-spacing: 0.05em;
-			padding: 0.2rem 0.7rem;
-			border-radius: 2px;
-			z-index: 2;
-		}
 
 		/* REVIEWS */
 		#reviews {
