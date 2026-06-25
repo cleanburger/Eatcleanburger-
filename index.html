@@ -562,8 +562,9 @@
 .drink-icon{font-size:2rem;margin-bottom:0.6rem}
 .drink-name{font-family:var(--font-display);font-size:1.3rem;letter-spacing:0.05em}
 .drink-sub{font-size:0.75rem;color:var(--green-light);letter-spacing:0.1em;text-transform:uppercase;margin-top:0.3rem}
-@media(max-width:900px){.build-grid{grid-template-columns:1fr}}
+@media(max-width:900px){.build-grid{grid-template-columns:1fr}.why-grid{grid-template-columns:repeat(2,1fr);gap:1px}#why{padding:3rem 1.5rem}}
 @media(max-width:480px){.drinks-grid{grid-template-columns:1fr}}
+	
 
 <!-- MENU -->
   <section id="menu" aria-labelledby="menu-heading">
@@ -631,13 +632,12 @@
         </div>
       </div>
 
-      <div class="menu-category-label fade-up" style="margin-top:4rem">&#129380; Drinks</div>
+   <div class="menu-category-label fade-up" style="margin-top:4rem">Drinks</div>
       <div class="drinks-grid fade-up">
-        <div class="drink-card"><div class="drink-icon">&#128167;</div><div class="drink-name">Water</div></div>
-        <div class="drink-card"><div class="drink-icon">&#127861;</div><div class="drink-name">Bai Drink</div><div class="drink-sub">Antioxidant Infused</div></div>
-        <div class="drink-card"><div class="drink-icon">&#129380;</div><div class="drink-name">Poppi Soda</div><div class="drink-sub">Prebiotic</div></div>
+        <div class="drink-card"><div class="drink-name">Water</div></div>
+        <div class="drink-card"><div class="drink-name">Bai Drink</div><div class="drink-sub">Antioxidant Infused</div></div>
+        <div class="drink-card"><div class="drink-name">Poppi Soda</div><div class="drink-sub">Prebiotic</div></div>
       </div>
-
     </div>
   </section>
 
