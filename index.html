@@ -543,95 +543,103 @@
 			color: var(--gray);
 			line-height: 1.7;
 		}
-		.menu-category-label{font-family:var(--font-display);font-size:2rem;letter-spacing:0.05em;color:var(--white);margin-bottom:0.3rem}
-.menu-category-note{font-size:0.78rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--orange);margin-bottom:1.5rem}
-.build-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-bottom:1rem}
-.build-card{background:var(--black);border:1px solid rgba(255,255,255,0.07);border-radius:4px;padding:1.8rem;transition:border-color 0.25s}
-.build-card:hover{border-color:rgba(245,124,0,0.3)}
-.build-card-header{font-family:var(--font-display);font-size:1.1rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--orange);margin-bottom:1rem;padding-bottom:0.5rem;border-bottom:1px solid rgba(245,124,0,0.2)}
-.build-list{list-style:none;display:flex;flex-direction:column;gap:1rem}
-.build-list li{display:flex;flex-direction:column;gap:0.4rem}
-.build-item-name{font-size:0.92rem;color:var(--white);font-weight:400}
-.build-item-tags{display:flex;flex-wrap:wrap;gap:0.3rem}
-.build-item-options{display:flex;gap:0.4rem;flex-wrap:wrap}
-.option-tag{font-size:0.65rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--gray);border:1px solid rgba(255,255,255,0.1);padding:0.2rem 0.5rem;border-radius:2px}
-.toppings-list .build-item-name{color:var(--gray-light)}
-@media(max-width:900px){.build-grid{grid-template-columns:1fr}.why-grid{grid-template-columns:repeat(2,1fr);gap:1px}#why{padding:3rem 1.5rem}}
-	
-
+		.menu-columns{display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin-top:3rem}
+.menu-col{}
+.menu-cat-header{font-family:var(--font-display);font-size:1.6rem;letter-spacing:0.05em;color:var(--white);background:var(--green);padding:0.4rem 1rem;margin-bottom:1.2rem;border-radius:2px;display:inline-block}
+.menu-item{padding:0.9rem 0;border-bottom:1px solid rgba(255,255,255,0.07)}
+.menu-item:last-child{border-bottom:none}
+.menu-item-name{font-family:var(--font-display);font-size:1.2rem;letter-spacing:0.05em;color:var(--orange);margin-bottom:0.3rem}
+.menu-item-desc{font-size:0.82rem;color:var(--gray);line-height:1.6}
+.byb-section{margin-top:4rem;border:1px solid rgba(245,124,0,0.3);border-radius:4px;padding:2.5rem;background:var(--black-2)}
+.byb-title{font-family:var(--font-display);font-size:2rem;letter-spacing:0.05em;color:var(--white);text-align:center;margin-bottom:2rem}
+.byb-steps{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem}
+.byb-step{text-align:center;padding:1rem 0.5rem}
+.byb-num{font-family:var(--font-display);font-size:2rem;color:var(--orange);line-height:1;margin-bottom:0.5rem}
+.byb-step-label{font-size:0.78rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--white);margin-bottom:0.4rem}
+.byb-step-desc{font-size:0.75rem;color:var(--gray);line-height:1.5}
+.byb-tagline{text-align:center;margin-top:2rem;font-size:0.75rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--gray);border-top:1px solid rgba(255,255,255,0.07);padding-top:1.2rem}
+		
 <!-- MENU -->
-  <section id="menu" aria-labelledby="menu-heading">
+ <section id="menu" aria-labelledby="menu-heading">
     <div class="menu-inner">
       <div class="section-label">What We Serve</div>
       <h2 class="section-title" id="menu-heading">THE <span style="color:var(--green-light)">MENU</span></h2>
-      <p class="section-sub">Every ingredient chosen with intention. Built your way.</p>
-
-      <div class="menu-category-label fade-up">Build Your Burger</div>
-      <div class="menu-category-note fade-up">Price Coming Soon</div>
-      <div class="build-grid fade-up">
-        <div class="build-card">
-          <div class="build-card-header">Protein</div>
-          <ul class="build-list">
-            <li>
-              <span class="build-item-name">100% Grass Fed Beef</span>
-              <div class="build-item-tags"><span class="tag tag-green">Grass Fed</span><span class="tag tag-orange">High Protein</span></div>
-              <div class="build-item-options"><span class="option-tag">Single Patty</span><span class="option-tag">Double Patty</span></div>
-            </li>
-            <li>
-              <span class="build-item-name">Turkey Burger</span>
-              <div class="build-item-tags"><span class="tag tag-green">No Antibiotics</span><span class="tag tag-orange">High Protein</span></div>
-              <div class="build-item-options"><span class="option-tag">Single Patty</span><span class="option-tag">Double Patty</span></div>
-            </li>
-          </ul>
+      <p class="section-sub">Simple ingredients. Real food. Built your way.</p>
+      <div class="menu-columns">
+        <div class="menu-col">
+          <div class="menu-cat-header">Grass-Fed Beef</div>
+          <div class="menu-item">
+            <div class="menu-item-name">Clean Burger Classic</div>
+            <div class="menu-item-desc">Handcrafted grass-fed beef patty, aged cheddar cheese, avocado mayo, lettuce, tomato, onion, pickles, signature sauce, organic unbleached bun</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-name">Clean Original</div>
+            <div class="menu-item-desc">Handcrafted grass-fed beef patty, aged cheddar cheese, organic unbleached bun</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-name">Smash Burger</div>
+            <div class="menu-item-desc">2 handcrafted grass-fed beef patties, aged cheddar cheese, grilled onions, signature sauce, organic unbleached bun</div>
+          </div>
+          <div class="menu-cat-header" style="margin-top:2.5rem">Turkey Burgers</div>
+          <div class="menu-item">
+            <div class="menu-item-name">Turkey Smash</div>
+            <div class="menu-item-desc">2 handcrafted antibiotic-free ground turkey patties, aged cheddar cheese, grilled onions, organic unbleached bun, signature sauce</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-name">Turkey Classic</div>
+            <div class="menu-item-desc">Handcrafted antibiotic-free ground turkey patty, aged cheddar cheese, lettuce, tomato, pickle, avocado mayo, signature sauce, organic multigrain bun</div>
+          </div>
         </div>
-        <div class="build-card">
-          <div class="build-card-header">Bun</div>
-          <ul class="build-list">
-            <li><span class="build-item-name">Dave's Killer Bread Artisan Bun</span><div class="build-item-tags"><span class="tag tag-white">Non GMO</span></div></li>
-            <li><span class="build-item-name">Dave's Killer Bread Whole Grain</span><div class="build-item-tags"><span class="tag tag-white">Whole Grain</span></div></li>
-          </ul>
-          <div class="build-card-header" style="margin-top:1.5rem">Cheese</div>
-          <ul class="build-list">
-            <li><span class="build-item-name">White American</span></li>
-            <li><span class="build-item-name">Raw Cheddar</span></li>
-          </ul>
-        </div>
-        <div class="build-card">
-          <div class="build-card-header">Toppings</div>
-          <ul class="build-list toppings-list">
-            <li><span class="build-item-name">Ketchup</span></li>
-            <li><span class="build-item-name">Mayo</span></li>
-            <li><span class="build-item-name">Mustard</span></li>
-            <li><span class="build-item-name">Fried Onions</span><div class="build-item-tags"><span class="tag tag-orange">Homemade</span></div></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="menu-category-label fade-up" style="margin-top:4rem">Hot Dogs</div>
-      <div class="menu-category-note fade-up">Price Coming Soon</div>
-      <div class="build-grid fade-up" style="grid-template-columns:repeat(2,1fr)">
-        <div class="build-card">
-          <div class="build-card-header">Roll</div>
-          <ul class="build-list">
-            <li><span class="build-item-name">647 Hot Dog Roll</span></li>
-          </ul>
-        </div>
-        <div class="build-card">
-          <div class="build-card-header">Dog</div>
-          <ul class="build-list">
-            <li><span class="build-item-name">Applegate Natural Uncured Beef</span><div class="build-item-tags"><span class="tag tag-green">Uncured</span><span class="tag tag-white">No Nitrates</span></div></li>
-            <li><span class="build-item-name">Applegate Organic Uncured Turkey</span><div class="build-item-tags"><span class="tag tag-green">Organic</span><span class="tag tag-white">Uncured</span></div></li>
-          </ul>
+        <div class="menu-col">
+          <div class="menu-cat-header">Clean Dogs</div>
+          <div class="menu-item">
+            <div class="menu-item-name">Grass-Fed Beef Dog</div>
+            <div class="menu-item-desc">On an organic roll with choice of toppings</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-name">Organic Turkey Dog</div>
+            <div class="menu-item-desc">On an organic roll with choice of toppings</div>
+          </div>
+          <div class="menu-cat-header" style="margin-top:2.5rem">Sides</div>
+          <div class="menu-item">
+            <div class="menu-item-name">Avocado Oil Potato Chips</div>
+          </div>
+          <div class="menu-cat-header" style="margin-top:2.5rem">Drinks</div>
+          <div class="menu-item"><div class="menu-item-name">Bai</div></div>
+          <div class="menu-item"><div class="menu-item-name">Sparkling Water</div></div>
+          <div class="menu-item"><div class="menu-item-name">Poppi Soda</div></div>
         </div>
       </div>
-
-<div class="menu-category-label fade-up" style="margin-top:4rem">Drinks</div>
-      <div class="build-card fade-up" style="max-width:400px">
-        <ul class="build-list">
-          <li><span class="build-item-name">Water</span></li>
-          <li><span class="build-item-name">Bai Drink</span><div class="build-item-tags"><span class="tag tag-green">Antioxidant Infused</span></div></li>
-          <li><span class="build-item-name">Poppi Soda</span><div class="build-item-tags"><span class="tag tag-green">Prebiotic</span></div></li>
-        </ul>
+      <div class="byb-section fade-up">
+        <div class="byb-title">Build Your Burger</div>
+        <div class="byb-steps">
+          <div class="byb-step">
+            <div class="byb-num">1</div>
+            <div class="byb-step-label">Pick Your Protein</div>
+            <div class="byb-step-desc">Grass-Fed Beef or Turkey</div>
+          </div>
+          <div class="byb-step">
+            <div class="byb-num">2</div>
+            <div class="byb-step-label">Choose Your Cheese</div>
+            <div class="byb-step-desc">Aged Cheddar</div>
+          </div>
+          <div class="byb-step">
+            <div class="byb-num">3</div>
+            <div class="byb-step-label">Add Your Toppings</div>
+            <div class="byb-step-desc">Lettuce, Tomato, Onion, Pickles, Grilled Onions</div>
+          </div>
+          <div class="byb-step">
+            <div class="byb-num">4</div>
+            <div class="byb-step-label">Pick Your Sauce</div>
+            <div class="byb-step-desc">Signature Sauce, Avocado Mayo, Ketchup, Mustard, Mayo</div>
+          </div>
+          <div class="byb-step">
+            <div class="byb-num">5</div>
+            <div class="byb-step-label">Choose Your Bun</div>
+            <div class="byb-step-desc">Organic Unbleached or Organic Multigrain</div>
+          </div>
+        </div>
+        <div class="byb-tagline">EAT CLEAN. LIVE WELL. &nbsp;|&nbsp; SIMPLE INGREDIENTS. REAL FOOD.</div>
       </div>
     </div>
   </section>
