@@ -462,6 +462,44 @@
       transition:background 0.2s,transform 0.15s;
     }
     .btn-order:hover{background:var(--orange-light);transform:translateY(-2px)}
+  
+    /* MOBILE MENU */
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: var(--cream);
+      z-index: 99;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--brown);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .mobile-menu a:hover { color: var(--orange); }
+    .mobile-menu .mobile-order {
+      background: var(--orange);
+      color: var(--white) !important;
+      padding: 0.8rem 2.5rem;
+      border-radius: 2px;
+    }
+    .mobile-menu-close {
+      position: absolute;
+      top: 1.2rem; right: 1.5rem;
+      background: none; border: none;
+      font-size: 2rem; cursor: pointer;
+      color: var(--brown);
+    }
   </style>
 </head>
 <body>
@@ -477,8 +515,17 @@
     <li><a href="#find-us" class="nav-cta">Stay Connected</a></li>
     <li><a href="https://www.instagram.com/cleanburgernj/" class="nav-order" target="_blank" rel="noopener">Order Now</a></li>
   </ul>
-  <button class="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
 </nav>
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobile-menu">
+    <button class="mobile-menu-close" id="mobile-close" aria-label="Close menu">✕</button>
+    <a href="https://www.instagram.com/cleanburgernj/" class="mobile-order" target="_blank" rel="noopener" onclick="closeMobileMenu()">Order Here</a>
+    <a href="#why" onclick="closeMobileMenu()">Our Promise</a>
+    <a href="#menu" onclick="closeMobileMenu()">Menu</a>
+    <a href="#reviews" onclick="closeMobileMenu()">Reviews</a>
+    <a href="#find-us" onclick="closeMobileMenu()">Stay Connected</a>
+  </div>
 
 <main>
 
@@ -752,6 +799,17 @@
 
 <script>
   document.documentElement.classList.add('js-loaded');
+
+  // Mobile menu
+  function closeMobileMenu() {
+    document.getElementById('mobile-menu').classList.remove('open');
+  }
+  document.getElementById('hamburger').addEventListener('click', function() {
+    document.getElementById('mobile-menu').classList.add('open');
+  });
+  document.getElementById('mobile-close').addEventListener('click', function() {
+    closeMobileMenu();
+  });
 
   document.querySelectorAll('#hero .fade-up').forEach((el, i) => {
     setTimeout(() => el.classList.add('visible'), i * 120 + 50);
