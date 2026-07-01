@@ -122,8 +122,8 @@
     .btn-primary{
       background:var(--green);color:var(--white);
       font-family:var(--font-display);font-weight:600;
-      font-size:0.95rem;letter-spacing:0.12em;text-transform:uppercase;
-      padding:0.9rem 2rem;border:none;cursor:pointer;
+      font-size:0.85rem;letter-spacing:0.12em;text-transform:uppercase;
+      padding:0.7rem 1.4rem;border:none;cursor:pointer;
       text-decoration:none;display:inline-block;border-radius:2px;
       transition:background 0.2s,transform 0.15s;
     }
@@ -131,8 +131,8 @@
     .btn-outline{
       background:transparent;color:var(--brown);
       font-family:var(--font-display);font-weight:600;
-      font-size:0.95rem;letter-spacing:0.12em;text-transform:uppercase;
-      padding:0.9rem 2rem;border:2px solid var(--brown);
+      font-size:0.85rem;letter-spacing:0.12em;text-transform:uppercase;
+      padding:0.7rem 1.4rem;border:2px solid var(--brown);
       cursor:pointer;text-decoration:none;display:inline-block;
       border-radius:2px;transition:all 0.2s;
     }
@@ -446,6 +446,22 @@
       .email-form input{border-right:2px solid var(--cream-darker);border-bottom:none;border-radius:2px 2px 0 0}
       .email-form button{border-radius:0 0 2px 2px}
     }
+  
+    .nav-order{
+      background:var(--orange);color:var(--white)!important;
+      font-weight:600!important;padding:0.5rem 1.2rem;
+      border-radius:2px;transition:background 0.2s!important;
+    }
+    .nav-order:hover{background:var(--orange-light)!important}
+    .btn-order{
+      background:var(--orange);color:var(--white);
+      font-family:var(--font-display);font-weight:600;
+      font-size:0.85rem;letter-spacing:0.12em;text-transform:uppercase;
+      padding:0.7rem 1.4rem;border:none;cursor:pointer;
+      text-decoration:none;display:inline-block;border-radius:2px;
+      transition:background 0.2s,transform 0.15s;
+    }
+    .btn-order:hover{background:var(--orange-light);transform:translateY(-2px)}
   </style>
 </head>
 <body>
@@ -459,6 +475,7 @@
     <li><a href="#menu">Menu</a></li>
     <li><a href="#reviews">Reviews</a></li>
     <li><a href="#find-us" class="nav-cta">Stay Connected</a></li>
+    <li><a href="https://www.instagram.com/cleanburgernj/" class="nav-order" target="_blank" rel="noopener">Order Now</a></li>
   </ul>
   <button class="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
 </nav>
@@ -474,6 +491,7 @@
         </h1>
         <p class="hero-tagline fade-up">The Burger That Fits Your Diet</p>
 <div class="hero-actions fade-up">
+          <a href="https://www.instagram.com/cleanburgernj/" class="btn-order" target="_blank" rel="noopener">Order Here</a>
           <a href="#find-us" class="btn-primary">Stay Connected</a>
           <a href="#menu" class="btn-outline">See the Menu</a>
         </div>
@@ -523,7 +541,6 @@
   <!-- WHY -->
   <section id="why" aria-labelledby="why-heading">
     <div class="why-inner">
-      <p class="section-eyebrow fade-up">Our Promise</p>
       <h2 class="section-title fade-up" id="why-heading">WHY CLEAN <span>BURGER?</span></h2>
       <p class="section-sub fade-up">Every ingredient is chosen intentionally. No shortcuts. No compromises.</p>
       <div class="why-grid">
@@ -562,7 +579,6 @@
   <!-- MENU -->
   <section id="menu" aria-labelledby="menu-heading">
     <div class="menu-inner">
-      <p class="section-eyebrow fade-up">What We Serve</p>
       <h2 class="section-title fade-up" id="menu-heading">THE <span>MENU</span></h2>
       <p class="section-sub fade-up">Simple ingredients. Real food. Built your way.</p>
       <div class="menu-columns">
@@ -647,7 +663,6 @@
   <!-- REVIEWS -->
   <section id="reviews" aria-labelledby="reviews-heading">
     <div class="reviews-inner">
-      <p class="section-eyebrow fade-up">What People Say</p>
       <h2 class="section-title fade-up" id="reviews-heading">REAL <span>REVIEWS</span></h2>
       <p class="section-sub fade-up">Don't take our word for it.</p>
       <div class="reviews-grid">
@@ -782,5 +797,34 @@
     statsObs.observe(statsEl);
   }
 </script>
+
+  <!-- STICKY ORDER BUTTON -->
+  <div id="sticky-order" style="
+    position:fixed;bottom:0;left:0;right:0;z-index:200;
+    background:var(--orange);
+    padding:1rem 2rem;
+    text-align:center;
+    transform:translateY(100%);
+    transition:transform 0.3s ease;
+    border-top:3px solid var(--brown);
+  ">
+    <a href="https://www.instagram.com/cleanburgernj/" target="_blank" rel="noopener" style="
+      color:var(--white);text-decoration:none;
+      font-family:var(--font-display);font-size:1.1rem;
+      font-weight:700;letter-spacing:0.15em;text-transform:uppercase;
+    ">Order Now — DM Us On Instagram →</a>
+  </div>
+  <script>
+    var stickyOrder = document.getElementById('sticky-order');
+    var heroEl = document.getElementById('hero');
+    window.addEventListener('scroll', function() {
+      var heroBottom = heroEl.getBoundingClientRect().bottom;
+      if (heroBottom < 0) {
+        stickyOrder.style.transform = 'translateY(0)';
+      } else {
+        stickyOrder.style.transform = 'translateY(100%)';
+      }
+    });
+  </script>
 </body>
 </html>
