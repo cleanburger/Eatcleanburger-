@@ -265,61 +265,89 @@
     }
     .why-desc{font-size:0.88rem;color:var(--gray);line-height:1.7}
 
-    /* MENU */
-    #menu{padding:6rem 4rem;background:var(--cream)}
-    .menu-inner{max-width:1200px;margin:0 auto}
-    .menu-columns{display:grid;grid-template-columns:1fr 1fr;gap:4rem;margin-top:3rem}
-    .menu-col{}
-    .menu-cat-header{
-      font-family:var(--font-display);font-size:1.3rem;
-      font-weight:700;letter-spacing:0.1em;text-transform:uppercase;
-      color:var(--white);background:var(--green);
-      padding:0.5rem 1rem;margin-bottom:1.2rem;
-      display:inline-block;
-    }
-    .menu-item{
-      padding:0.8rem 0;
-      border-bottom:1px solid var(--cream-darker);
-    }
-    .menu-item:last-child{border-bottom:none}
-    .menu-item-name{
-      font-family:var(--font-display);font-size:1.1rem;
-      font-weight:600;letter-spacing:0.05em;text-transform:uppercase;
-      color:var(--orange);margin-bottom:0.3rem;
-    }
-    .menu-item-desc{font-size:0.82rem;color:var(--gray);line-height:1.6}
-    .byb-section{
-      margin-top:3rem;
-      border:2px solid var(--brown);
-      padding:2rem;background:var(--cream-dark);
-    }
-    .byb-title{
-      font-family:var(--font-display);font-size:1.8rem;
-      font-weight:700;text-transform:uppercase;
-      letter-spacing:0.05em;color:var(--brown);
-      text-align:center;margin-bottom:1.5rem;
-    }
-    .byb-title span{color:var(--orange)}
-    .byb-steps{display:grid;grid-template-columns:repeat(5,1fr);gap:0.8rem}
-    .byb-step{text-align:center;padding:0.8rem 0.3rem}
-    .byb-num{
-      font-family:var(--font-display);font-size:1.8rem;
-      font-weight:700;color:var(--orange);line-height:1;margin-bottom:0.4rem;
-    }
-    .byb-step-label{
-      font-size:0.72rem;font-weight:600;
-      letter-spacing:0.08em;text-transform:uppercase;
-      color:var(--brown);margin-bottom:0.3rem;
-    }
-    .byb-step-desc{font-size:0.72rem;color:var(--gray);line-height:1.4}
-    .byb-tagline{
-      text-align:center;margin-top:1.5rem;
-      font-family:var(--font-display);font-size:0.85rem;
-      font-weight:700;letter-spacing:0.2em;text-transform:uppercase;
-      color:var(--brown);border-top:1px solid var(--cream-darker);
-      padding-top:1rem;
-    }
-    .byb-tagline span{color:var(--orange)}
+   <!-- MENU -->
+  <section id="menu" aria-labelledby="menu-heading">
+    <div class="menu-inner">
+      <h2 class="section-title fade-up" id="menu-heading">THE <span>MENU</span></h2>
+      <p class="section-sub fade-up">Simple ingredients. Real food. Built your way.</p>
+      <div class="menu-columns">
+        <div class="menu-col fade-up">
+          <div class="menu-cat-header">Grass-Fed Beef</div>
+          <div class="menu-item">
+            <div class="menu-item-name"><a href="https://order.toasttab.com/online/clean-burger-llc-901-white-horse-pike/item-grassfed-beef-burger_7ba584dc-c307-4f0e-a589-55fdc78bd203" target="_blank" rel="noopener" style="color:var(--orange);text-decoration:none;border-bottom:1px dotted var(--orange);transition:opacity 0.2s" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">Clean Burger Classic →</a></div>
+            <div class="menu-item-desc">Handcrafted grass-fed beef patty, aged cheddar cheese, avocado mayo, lettuce, tomato, onion, pickles, signature sauce, organic unbleached bun</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-name"><a href="https://order.toasttab.com/online/clean-burger-llc-901-white-horse-pike/item-grassfed-beef-burger_7ba584dc-c307-4f0e-a589-55fdc78bd203" target="_blank" rel="noopener" style="color:var(--orange);text-decoration:none;border-bottom:1px dotted var(--orange);transition:opacity 0.2s" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">Clean Original →</a></div>
+            <div class="menu-item-desc">Handcrafted grass-fed beef patty, aged cheddar cheese, organic unbleached bun</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-name"><a href="https://order.toasttab.com/online/clean-burger-llc-901-white-horse-pike/item-grassfed-beef-smash-burger_4fcb7353-3071-49f8-9e9c-8fd8f16ba437" target="_blank" rel="noopener" style="color:var(--orange);text-decoration:none;border-bottom:1px dotted var(--orange);transition:opacity 0.2s" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">Smash Burger →</a></div>
+            <div class="menu-item-desc">2 handcrafted grass-fed beef patties, aged cheddar cheese, grilled onions, signature sauce, organic unbleached bun</div>
+          </div>
+          <div class="menu-cat-header" style="margin-top:2rem">Turkey Burgers</div>
+          <div class="menu-item">
+            <div class="menu-item-name"><a href="https://order.toasttab.com/online/clean-burger-llc-901-white-horse-pike/item-organic-turkey-smash-burger_96fe9d5a-9d70-4244-a71c-b8b425d2cc8e" target="_blank" rel="noopener" style="color:var(--orange);text-decoration:none;border-bottom:1px dotted var(--orange);transition:opacity 0.2s" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">Turkey Smash →</a></div>
+            <div class="menu-item-desc">2 handcrafted antibiotic-free ground turkey patties, aged cheddar cheese, grilled onions, organic unbleached bun, signature sauce</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-name"><a href="https://order.toasttab.com/online/clean-burger-llc-901-white-horse-pike/item-organic-turkey-burger_9b2f9540-6bba-4d77-924c-362e49eaa0f3" target="_blank" rel="noopener" style="color:var(--orange);text-decoration:none;border-bottom:1px dotted var(--orange);transition:opacity 0.2s" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">Turkey Classic →</a></div>
+            <div class="menu-item-desc">Handcrafted antibiotic-free ground turkey patty, aged cheddar cheese, lettuce, tomato, pickle, avocado mayo, signature sauce, organic multigrain bun</div>
+          </div>
+        </div>
+        <div class="menu-col fade-up fade-up-delay-1">
+          <div class="menu-cat-header">Clean Dogs</div>
+          <div class="menu-item">
+            <div class="menu-item-name"><a href="https://order.toasttab.com/online/clean-burger-llc-901-white-horse-pike/item-grassfed-beef-hotdog_d3523c66-3864-434e-b7af-c1627378d488" target="_blank" rel="noopener" style="color:var(--orange);text-decoration:none;border-bottom:1px dotted var(--orange);transition:opacity 0.2s" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">Grass-Fed Beef Dog →</a></div>
+            <div class="menu-item-desc">On an organic roll with choice of toppings</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-name"><a href="https://order.toasttab.com/online/clean-burger-llc-901-white-horse-pike/item-organic-turkey-hotdog_3c8333be-19df-4db0-9ff7-6070f159011d" target="_blank" rel="noopener" style="color:var(--orange);text-decoration:none;border-bottom:1px dotted var(--orange);transition:opacity 0.2s" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">Organic Turkey Dog →</a></div>
+            <div class="menu-item-desc">On an organic roll with choice of toppings</div>
+          </div>
+          <div class="menu-cat-header" style="margin-top:2rem">Sides</div>
+          <div class="menu-item">
+            <div class="menu-item-name"><a href="https://order.toasttab.com/online/clean-burger-llc-901-white-horse-pike/item-boulder-potato-chips_09c6b401-9ec6-4c61-a782-fa77dc047808" target="_blank" rel="noopener" style="color:var(--orange);text-decoration:none;border-bottom:1px dotted var(--orange);transition:opacity 0.2s" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">Avocado Oil Potato Chips →</a></div>
+          </div>
+          <div class="menu-cat-header" style="margin-top:2rem">Drinks</div>
+          <div class="menu-item"><div class="menu-item-name">Bai</div></div>
+          <div class="menu-item"><div class="menu-item-name">Sparkling Water</div></div>
+          <div class="menu-item"><div class="menu-item-name">Poppi Soda</div></div>
+        </div>
+      </div>
+      <div class="byb-section fade-up">
+        <div class="byb-title">Build Your <span>Burger</span></div>
+        <div class="byb-steps">
+          <div class="byb-step">
+            <div class="byb-num">1</div>
+            <div class="byb-step-label">Pick Your Protein</div>
+            <div class="byb-step-desc">Grass-Fed Beef or Turkey</div>
+          </div>
+          <div class="byb-step">
+            <div class="byb-num">2</div>
+            <div class="byb-step-label">Choose Your Cheese</div>
+            <div class="byb-step-desc">Aged Cheddar</div>
+          </div>
+          <div class="byb-step">
+            <div class="byb-num">3</div>
+            <div class="byb-step-label">Add Your Toppings</div>
+            <div class="byb-step-desc">Lettuce, Tomato, Onion, Pickles, Grilled Onions</div>
+          </div>
+          <div class="byb-step">
+            <div class="byb-num">4</div>
+            <div class="byb-step-label">Pick Your Sauce</div>
+            <div class="byb-step-desc">Signature Sauce, Avocado Mayo, Ketchup, Mustard, Mayo</div>
+          </div>
+          <div class="byb-step">
+            <div class="byb-num">5</div>
+            <div class="byb-step-label">Choose Your Bun</div>
+            <div class="byb-step-desc">Organic Unbleached or Organic Multigrain</div>
+          </div>
+        </div>
+        <div class="byb-tagline">EAT CLEAN. EAT GOOD. &nbsp;|&nbsp; SIMPLE INGREDIENTS. REAL FOOD.</div>
+      </div>
+    </div>
+  </section>
 
     /* REVIEWS */
     #reviews{padding:6rem 4rem;background:var(--cream-dark)}
@@ -969,11 +997,11 @@
     transition:transform 0.3s ease;
     border-top:3px solid var(--brown);
   ">
-    <a href="https://www.instagram.com/cleanburgernj/" target="_blank" rel="noopener" style="
+    <a href="https://order.toasttab.com/online/clean-burger-llc-901-white-horse-pike" target="_blank" rel="noopener" style="
       color:var(--white);text-decoration:none;
       font-family:var(--font-display);font-size:1.1rem;
       font-weight:700;letter-spacing:0.15em;text-transform:uppercase;
-    ">Order Now→</a>
+    ">Order Now — Clean Burger →</a>
   </div>
   <script>
     var stickyOrder = document.getElementById('sticky-order');
